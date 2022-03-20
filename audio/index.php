@@ -39,7 +39,7 @@ $public = $hammer->unsanitize($filerow['filename']);
 // $url = S3::getAuthenticatedURL($bucket, $file, 3600, false, true);
 
 	// Generate Shared Access Signature
-		$sasHelper = new \MicrosoftAzure\Storage\Blob\BlobSharedAccessSignatureHelper("liszt", "quOdX9BvIMO9y8zS+fqCwStcEEZjULXM/OaIp6W7lTdXsrPfK309DUU9c/rViF9MHu8AdbWyR0FntNu2iGaSXA==");
+		$sasHelper = new \MicrosoftAzure\Storage\Blob\BlobSharedAccessSignatureHelper("liszt", $hammer->msKey);
 		$sas = $sasHelper->generateAccountSharedAccessSignatureToken(
 			'2018-11-09',
 			'rwl',
