@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^liszt.me/fetch/audio/media/$ [NC]
+RewriteRule ^([^/\.]+)/([^/\.]+)$ /$1/$2/ [r]
+RewriteRule ^([^/\.]+)/([^/\.]+)/$ download.php?platform=$1&file=$2 [L]

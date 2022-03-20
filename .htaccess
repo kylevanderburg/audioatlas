@@ -1,0 +1,29 @@
+Allow from all
+Header set Access-Control-Allow-Origin "*"
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^audioatlas.org$ [NC]
+RewriteRule ^wp-login.php$ http://no.kylev.net [L]
+RewriteRule ^xmlrpc.php$ http://no.kylev.net [L]
+RewriteRule ^account/$ /account/
+RewriteRule ^account/([^/\.]+)$ /account/$1/ [R]
+RewriteRule ^account/([^/\.]+)/?$ /account/index.php?page=$1
+RewriteRule ^account/([^/\.]+)/([^/\.]+)$ /account/$1/$2/ [R]
+RewriteRule ^account/([^/\.]+)/([^/\.]+)/$ /account/index.php?page=$1&action=$2
+RewriteRule ^account/([^/\.]+)/([^/\.]+)/([^/\.]+)$ /account/$1/$2/$3/ [R]
+RewriteRule ^account/([^/\.]+)/([^/\.]+)/([^/\.]+)/$ /account/index.php?page=$1&action=$2&item=$3
+RewriteRule ^account/([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)$ /account/$1/$2/$3/$4/ [R]
+RewriteRule ^account/([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)/$ /account/index.php?page=$1&action=$2&item=$3&item2=$4
+RewriteRule ^account/([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)$ /account/$1/$2/$3/$4/$5/ [R]
+RewriteRule ^account/([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)/$ /account/index.php?page=$1&action=$2&item=$3&item2=$4&item3=$5 [L]
+RewriteRule ^([^/\.]+)$ /$1/ [R]
+RewriteRule ^([^/\.]+)/?$ index.php?page=$1
+RewriteRule ^([^/\.]+)/([^/\.]+)$ /$1/$2/ [R]
+RewriteRule ^([^/\.]+)/([^/\.]+)/$ index.php?page=$1&slug=$2
+RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)$ /$1/$2/$3/ [R]
+RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)/$ index.php?page=$1&slug=$2&item=$3
+RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)$ /$1/$2/$3/$4/ [R]
+RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)/$ index.php?page=$1&slug=$2&item=$3&item2=$4
+RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)$ /$1/$2/$3/$4/$5/ [R]
+RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)/$ index.php?page=$1&slug=$2&item=$3&item2=$4&item3=$5 [L]

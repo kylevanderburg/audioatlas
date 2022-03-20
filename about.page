@@ -1,0 +1,15 @@
+<div class="container">
+<h1>AudioAtlas is a global Sound Map.</h1>
+Sound Maps are maps that place sounds in locations. Landmarks (especially noisy ones like factories, train stations, streets, bell towers, and tornado sirens) are associated with their resultant sounds in a geographical fashion. Cities such as <a href="http://www.belfastsoundmap.org">Belfast</a>, <a href="http://torontosoundmap.com">Toronto</a>, <a href="http://www.nysoundmap.org">New York</a>, and <a href="http://www.montrealsoundmap.com">Montreal</a> have their own Sound Maps.
+<br /><br />
+<h3>AudioAtlas, though, is Global.</h3>
+AudioAtlas aims to be a global Sound Map platform, where sound artists and institutions can create their own Sound Maps quickly and easily, while contributing to a global project. It's still in development, though, and we don't have ALL the kinks worked out yet.
+<br /><br />
+<h3>I want in on this!</h3>
+I bet you do. Send an email to <a href="mailto:info@noteforge.com">info@noteforge.com</a> to request an account.
+<hr width="50%" align="center">
+<h2>The Technology behind AudioAtlas</h2>
+AudioAtlas is part of <a href="http://liszt.me">Liszt</a>, and is built on Hammer, a proprietary musician webapp built by NoteForge for its own use. Over its six years of development, we realized that some of the things we built for us might be useful for you. Tracking performances, sending invoices, keeping track of documents, lesson planning, Hammer does it all for us. And we hope that soon, Liszt can do it all for you.<br /><br />
+Here's some technical information about <a href="http://noteforge.com/labs/hammer/">Hammer</a>.
+
+</div>

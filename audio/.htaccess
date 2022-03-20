@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^liszt.me$ [NC]
+RewriteRule ^([^/\.]+)$ /$1/ [r]
+RewriteRule ^([^/\.]+)/$ index.php?file=$1 [L]

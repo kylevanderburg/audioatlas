@@ -1,0 +1,25 @@
+[{
+    "type": "Feature",
+    "properties": {
+        "name": "Coors Field",
+        "show_on_map": true,
+		"popupContent": "This is where the Rockies play!",
+		"fileguid": "1ced5eac-6aaa-42ec-8ac2-c5b353e8ac0f"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-104.99404, 39.75621]
+    }
+}, {
+    "type": "Feature",
+    "properties": {
+        "name": "Busch Field",
+        "show_on_map": true,
+		"popupContent": "This is where the cardinals play!",
+		"fileguid": "33b1c4b4-ec23-4d08-8700-4fa579a63b3a"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-110.98404, 39.74621]
+    }
+}]
