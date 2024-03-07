@@ -1,4 +1,4 @@
-@import url('//nf.azureedge.net/common/kvclear.css');
+@import url('//cdn.ntfg.net/common/kvclear.css');
 
 
 #locationform{
@@ -13,3 +13,32 @@ height: 100%;
 margin: 0;
 }
 
+nav{
+  background-color: #000000; /* fallback color, place your own */
+}
+
+.wrapper{
+	height: calc(100% - 76px);
+	height: -o-calc(100% - 76px); /* opera */
+	height: -webkit-calc(100% - 76px); /* google, safari */
+	height: -moz-calc(100% - 76px); /* firefox */
+	width:100%;
+}
+
+@media (min-width: 800px) { 
+	.offcanvas-end {
+	  top: 0;
+	  right: 0;
+	  width: 90%;
+	  height:auto;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	
+	.offcanvas-end {
+	  top: 0;
+	  right: 0;
+	  width: 100%;
+	}
+}

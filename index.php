@@ -1,9 +1,9 @@
 <?php
 require "/var/www/api.ntfg.net/htdocs/hammer/vanilla.php";
 $hammer->head("AudioAtlas","<link rel=\"stylesheet\" href=\"/assets/aa-bootstrap.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
-<link rel=\"stylesheet\" href=\"//acdn.ntfg.net/vendor/leaflet/1.6.0/leaflet.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
-<script src=\"//acdn.ntfg.net/vendor/leaflet/1.6.0/leaflet.js\"></script>
-<script src=\"//acdn.ntfg.net/vendor/leaflet/ajax/leaflet.ajax.min.js\"></script>
+<link rel=\"stylesheet\" href=\"//cdn.ntfg.net/vendor/leaflet/1.6.0/leaflet.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
+<script src=\"//cdn.ntfg.net/vendor/leaflet/1.6.0/leaflet.js\"></script>
+<script src=\"//cdn.ntfg.net/vendor/leaflet/ajax/leaflet.ajax.min.js\"></script>
 ")
 ?>
 <body>
@@ -14,13 +14,13 @@ $hammer->head("AudioAtlas","<link rel=\"stylesheet\" href=\"/assets/aa-bootstrap
 if(isset($_GET['page'])){$page=$_GET['page'];}else{$page="index";}
 ?>
 <?php //TOP MENU ?>
-<nav class="navbar navbar-dark navbar-expand-md navbar-fixed-top">
+<nav class="navbar navbar-dark navbar-bg-dark navbar-expand-md navbar-fixed-top">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="/"><img src="/assets/AudioAtlas-2020.png"></a>
+		<a class="navbar-brand" href="/"><img src="/assets/AudioAtlas-2020.png" style="height:40px;"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#audioatlasnav" aria-controls="audioatlasnav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 	<div class="collapse navbar-collapse" id="audioatlasnav">
-		<ul class="navbar-nav ml-auto">
-			<a class="nav-link<?php if($page=="index"){echo "active";}?>" href="http://audioatlas.org/">Home</a>
+		<ul class="navbar-nav ms-auto">
+			<a class="nav-link<?php if($page=="index"){echo " active";}?>" href="http://audioatlas.org/">Home</a>
 			<a class="nav-link" id="locate" href="#"><i class="fa fa-location-arrow" title="Locate Me"></i></a>
 			<a class="nav-link" id="globe" href="#"><i class="fa fa-globe" title="Full Map"></i></a>
 			<a class="nav-link" href="https://noteforge.com/legal/liszt-terms-of-service/">License</a>
@@ -29,8 +29,18 @@ if(isset($_GET['page'])){$page=$_GET['page'];}else{$page="index";}
 	</div>
 	</div><!--Container-->
 </nav>
-<div class="wrapper" style="height:100%;width:100%;">
+<div class="wrapper">
 <div id="FullMap"></div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="lz-drawer<?php echo $hammer->getHT('timestamp')?>" aria-labelledby="lz-drawer<?php echo $hammer->getHT('timestamp')?>Label">
+	<div class="offcanvas-header">
+		<h5 id="lz-drawer<?php echo $hammer->getHT('timestamp')?>Label">AudioAtlas</h5>
+	<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	</div>
+	<div class="offcanvas-body" style="height:100%">
+			<iframe src="//liszt.dev/zz-loading.php" frameborder="0" style="height:99%; width:100%; overflow:hidden;overflow-x:hidden;overflow-y:hidden;" id="lz-drawer<?php echo $hammer->getHT('timestamp');?>iframe"></iframe>
+	</div>
 </div>
 
 <script>
@@ -76,11 +86,11 @@ L.control.scale().addTo(map);
 function onEachFeature(feature, layer) {
     //bind click
     layer.on('click', function (e) {
-	  options = {
-		url: "/aa-iframe.php?fileguid="+feature.properties.fileguid,
-		title:'File '+feature.properties.fileguid,
-	  };
-	  modal<?php echo $hammer->getHT('timestamp');?>.iframe(options);
+		url = "/aa-iframe.php?fileguid="+feature.properties.fileguid;
+		// alert(url);
+	  // modal<?php echo $hammer->getHT('timestamp');?>.iframe(options);
+	  $('#lz-drawer<?php echo $hammer->getHT('timestamp');?>iframe').attr('src',url);
+	  bsOffcanvas.show();
     });
 }
 

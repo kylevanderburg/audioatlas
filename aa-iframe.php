@@ -2,9 +2,9 @@
 $options['vanguard']=FALSE;
 require "/var/www/api.ntfg.net/htdocs/hammer/vanilla.php";
 $hammer->head("AudioAtlas","<link rel=\"stylesheet\" href=\"/assets/aa-bootstrap.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
-<link rel=\"stylesheet\" href=\"//acdn.ntfg.net/vendor/leaflet/1.3.1/leaflet.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
-<script src=\"//acdn.ntfg.net/vendor/leaflet/1.6.0/leaflet.js\"></script>
-<script src=\"//acdn.ntfg.net/vendor/leaflet/ajax/leaflet.ajax.min.js\"></script>
+<link rel=\"stylesheet\" href=\"//cdn.ntfg.net/vendor/leaflet/1.3.1/leaflet.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
+<script src=\"//cdn.ntfg.net/vendor/leaflet/1.6.0/leaflet.js\"></script>
+<script src=\"//cdn.ntfg.net/vendor/leaflet/ajax/leaflet.ajax.min.js\"></script>
 ");
 $hr = new audioatlas_datapoint($hammer);
 $dd = new david_document($hammer);

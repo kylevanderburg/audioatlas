@@ -4,7 +4,7 @@ require_once "/var/www/api.ntfg.net/htdocs/hammer/hammer.php";
 $hammer = new Hammer;
 $hr = new audioatlas_datapoint($hammer);
 $hammer->setSystem();
-foreach($hr->systemq("","") as $dp){
+foreach($hr->systemq() as $dp){
 	$content = "{
     \"type\": \"Feature\",
     \"properties\": {
