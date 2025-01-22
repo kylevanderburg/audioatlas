@@ -53,7 +53,10 @@ L.control.scale().addTo(map);
 
 //Locate
 	// map.locate({setView: true, maxZoom: 5}); //on autolocate
-	$('#locate').on('click', function(){map.locate({setView: true, maxZoom: 13})});
+	document.getElementById('locate').addEventListener('click', function() {
+		map.locate({ setView: true, maxZoom: 13 });
+	});
+
 
 //Tile Control
 	var baseMaps = {

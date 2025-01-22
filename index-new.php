@@ -47,8 +47,14 @@ $hammer->head("AudioAtlas","<link rel=\"stylesheet\" href=\"//liszt.dev/assets/l
                     attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'});
                 //Locate
                     //map.locate({setView: true, maxZoom: 5});
-                    $('#locate').on('click', function(){map.locate({setView: true, maxZoom: 13})});
-                    $('#globe').on('click', function(){map.locate({setView: true, maxZoom: 1})});
+                    document.getElementById('locate').addEventListener('click', function() {
+                        map.locate({ setView: true, maxZoom: 13 });
+                    });
+
+                    document.getElementById('globe').addEventListener('click', function() {
+                        map.locate({ setView: true, maxZoom: 1 });
+                    });
+
 
                 //Tile Control
                     var baseMaps = {
@@ -75,16 +81,19 @@ $hammer->head("AudioAtlas","<link rel=\"stylesheet\" href=\"//liszt.dev/assets/l
                 //Get from external?
 
                 function onEachFeature(feature, layer) {
-                    //bind click
+                    // Bind click
                     layer.on('click', function (e) {
-                      // options = {
-                        // url: "/aa-iframe.php?fileguid="+feature.properties.fileguid,
-                        // title:'File '+feature.properties.fileguid,
-                      // };
-					  var url = "/aa-iframe.php?fileguid="+feature.properties.fileguid;
-                      // modal<?php echo $hammer->getHT('timestamp');?>.iframe(options);
-					  $('#lz-drawer<?php echo $hammer->getHT('timestamp');?>iframe').attr('src',url);
-						bsOffcanvas.show();
+                        // Construct the URL
+                        var url = "/aa-iframe.php?fileguid=" + feature.properties.fileguid;
+
+                        // Set the iframe source
+                        const iframe = document.getElementById('lz-drawer<?php echo $hammer->getHT('timestamp'); ?>iframe');
+                        if (iframe) {
+                            iframe.setAttribute('src', url);
+                        }
+
+                        // Show the offcanvas
+                        bsOffcanvas.show();
                     });
                 }
 
