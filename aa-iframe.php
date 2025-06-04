@@ -1,10 +1,10 @@
 <?php
 $options['vanguard']=FALSE;
-require "/var/www/api.ntfg.net/htdocs/hammer/vanilla.php";
+require "/var/www/liszt.cloud/hammer/vanilla.php";
 $hammer->head("AudioAtlas","<link rel=\"stylesheet\" href=\"/assets/aa-bootstrap.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
-<link rel=\"stylesheet\" href=\"//cdn.ntfg.net/vendor/leaflet/1.3.1/leaflet.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
-<script src=\"//cdn.ntfg.net/vendor/leaflet/1.6.0/leaflet.js\"></script>
-<script src=\"//cdn.ntfg.net/vendor/leaflet/ajax/leaflet.ajax.min.js\"></script>
+<link rel=\"stylesheet\" href=\"//cdn.liszt.app/vendor/leaflet/1.3.1/leaflet.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
+<script src=\"//cdn.liszt.app/vendor/leaflet/1.6.0/leaflet.js\"></script>
+<script src=\"//cdn.liszt.app/vendor/leaflet/ajax/leaflet.ajax.min.js\"></script>
 ");
 $hr = new audioatlas_datapoint($hammer);
 $dd = new david_document($hammer);
@@ -76,7 +76,7 @@ L.marker([<?php echo $a['lat'];?>, <?php echo $a['lon'];?>]).addTo(map);
 
 
 </script>
-<?php require_once "/var/www/cdn.ntfg.net/htdocs/footer-scripts.php"; ?>
+<?php require_once "/var/www/liszt.cloud/templates/footer-scripts.php"; ?>
 </body>
 
 

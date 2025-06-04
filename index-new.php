@@ -6,12 +6,12 @@ NoteForge Hammer
 	Debuted on November 30, 2007, at www.kyledavey.com/blink.  Went live December 2, 2007.
 	All code copyright Kyle Vanderburg
 */
-require "/var/www/api.ntfg.net/htdocs/hammer/vanilla.php";
+require "/var/www/liszt.cloud/hammer/vanilla.php";
 $hammer->clientUrlParse();
 $hammer->head("AudioAtlas","<link rel=\"stylesheet\" href=\"//liszt.dev/assets/lz-master3.css\" type=\"text/css\" /><link rel=\"shortcut icon\" href=\"//liszt.me/assets/lisztfav.png\"/><script src=\"//liszt.dev/assets/lz-master3.js\"></script><link rel=\"stylesheet\" href=\"/assets/aa-bootstrap.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
-<link rel=\"stylesheet\" href=\"//acdn.ntfg.net/vendor/leaflet/1.6.0/leaflet.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
-<script src=\"//acdn.ntfg.net/vendor/leaflet/1.6.0/leaflet.js\"></script>
-<script src=\"//acdn.ntfg.net/vendor/leaflet/ajax/leaflet.ajax.min.js\"></script>
+<link rel=\"stylesheet\" href=\"//cdn.liszt.app/vendor/leaflet/1.6.0/leaflet.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
+<script src=\"//cdn.liszt.app/vendor/leaflet/1.6.0/leaflet.js\"></script>
+<script src=\"//cdn.liszt.app/vendor/leaflet/ajax/leaflet.ajax.min.js\"></script>
 ");
 
 
@@ -114,11 +114,11 @@ $hammer->head("AudioAtlas","<link rel=\"stylesheet\" href=\"//liszt.dev/assets/l
 	<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 	</div>
 	<div class="offcanvas-body" style="height:100%">
-			<iframe src="/zz-loading.php" frameborder="0" style="height:99%; width:100%; overflow:hidden;overflow-x:hidden;overflow-y:hidden;" id="lz-drawer<?php echo $hammer->getHT('timestamp');?>iframe"></iframe>
+			<iframe src="//liszt.app/zz-loading.php" frameborder="0" style="height:99%; width:100%; overflow:hidden;overflow-x:hidden;overflow-y:hidden;" id="lz-drawer<?php echo $hammer->getHT('timestamp');?>iframe"></iframe>
 	</div>
 </div>
 
-<?php require_once "/var/www/cdn.ntfg.net/htdocs/footer-scripts.php"; ?>
+<?php require_once "/var/www/liszt.cloud/templates/footer-scripts.php"; ?>
 
 </body>
 </html>

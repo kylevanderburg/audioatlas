@@ -9,7 +9,7 @@ header("Pragma: no-cache");
 <?php
 	use MicrosoftAzure\Storage\Blob\BlobRestProxy;
 	use MicrosoftAzure\Storage\Common\ServiceException;
-require_once "/var/www/api.ntfg.net/htdocs/hammer/hammer.php";
+require_once "/var/www/liszt.cloud/hammer/hammer.php";
 $hammer = new Hammer;
 $hammer->setHS(1);
 //FOR VARIABLES (currently in use)

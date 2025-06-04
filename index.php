@@ -1,9 +1,9 @@
 <?php
-require "/var/www/api.ntfg.net/htdocs/hammer/vanilla.php";
+require "/var/www/liszt.cloud/hammer/vanilla.php";
 $hammer->head("AudioAtlas","<link rel=\"stylesheet\" href=\"/assets/aa-bootstrap.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
-<link rel=\"stylesheet\" href=\"//cdn.ntfg.net/vendor/leaflet/1.6.0/leaflet.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
-<script src=\"//cdn.ntfg.net/vendor/leaflet/1.6.0/leaflet.js\"></script>
-<script src=\"//cdn.ntfg.net/vendor/leaflet/ajax/leaflet.ajax.min.js\"></script>
+<link rel=\"stylesheet\" href=\"//cdn.liszt.app/vendor/leaflet/1.6.0/leaflet.css?v=".$hammer->getHT('timestamp')."\" type=\"text/css\" />
+<script src=\"//cdn.liszt.app/vendor/leaflet/1.6.0/leaflet.js\"></script>
+<script src=\"//cdn.liszt.app/vendor/leaflet/ajax/leaflet.ajax.min.js\"></script>
 ")
 ?>
 <body>
@@ -99,5 +99,5 @@ L.control.scale().addTo(map);
 var aageojsonLayer = new L.GeoJSON.AJAX("aa-data.php",{onEachFeature:onEachFeature}).addTo(map); 
 
 </script>
-<?php require_once "/var/www/cdn.ntfg.net/htdocs/footer-scripts.php"; ?>
+<?php require_once "/var/www/liszt.cloud/templates/footer-scripts.php"; ?>
 </body>

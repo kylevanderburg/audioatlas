@@ -18,7 +18,7 @@ $file = $_GET['file'];
 // echo $file;
 
 //Load the Hammer Core, set the site config variable, and connect.
-require_once "/var/www/api.ntfg.net/htdocs/hammer/hammer.php";
+require_once "/var/www/liszt.cloud/hammer/hammer.php";
 $hammersite = 1;
 $hammer = new Hammer;
 

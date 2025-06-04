@@ -1,5 +1,5 @@
 <?php
-require_once "/var/www/api.ntfg.net/htdocs/hammer/hammer.php";
+require_once "/var/www/liszt.cloud/hammer/hammer.php";
 $platform = $_GET['platform'];
 $player = $_GET['player'];
 $title = $_GET['title'];
