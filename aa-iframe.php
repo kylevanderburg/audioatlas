@@ -76,7 +76,7 @@ L.marker([<?php echo $a['lat'];?>, <?php echo $a['lon'];?>]).addTo(map);
 
 
 </script>
-<?php require_once "/var/www/liszt.cloud/templates/footer-scripts.php"; ?>
+<?php require_once "/var/www/liszt.cloud/liszt-templates/footer-scripts.php"; ?>
 </body>
 
 

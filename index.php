@@ -99,5 +99,5 @@ L.control.scale().addTo(map);
 var aageojsonLayer = new L.GeoJSON.AJAX("aa-data.php",{onEachFeature:onEachFeature}).addTo(map); 
 
 </script>
-<?php require_once "/var/www/liszt.cloud/templates/footer-scripts.php"; ?>
+<?php require_once "/var/www/liszt.cloud/liszt-templates/footer-scripts.php"; ?>
 </body>

@@ -118,7 +118,7 @@ $hammer->head("AudioAtlas","<link rel=\"stylesheet\" href=\"//liszt.dev/assets/l
 	</div>
 </div>
 
-<?php require_once "/var/www/liszt.cloud/templates/footer-scripts.php"; ?>
+<?php require_once "/var/www/liszt.cloud/liszt-templates/footer-scripts.php"; ?>
 
 </body>
 </html>
